@@ -100,9 +100,17 @@ fi
 
 if[[$# -eq 0]]
 $# - keeps account of the positional parameters passed in from the command line 
-
 $* = "arg1 arg2 arg3 ...argn"
 $@ = "arg1" "arg2" "arg3"...
-
 $(basename $0) = scriptname.sh
 $0 = /path/to/script_name.sh
+File Test Operators
+-e File exists
+-b Block device files
+-c char device files
+-f regular files
+-d directories
+-r read access
+-w write access
+-x execute permissions
+-s Same as -x
