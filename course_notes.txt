@@ -114,3 +114,23 @@ File Test Operators
 -w write access
 -x execute permissions
 -s Same as -x
+
+WHAT was COVERED
+conditionals primer
+if conditional
+nesting
+case statement
+-----------------------
+
+Loops
+
+Outline
+for
+while
+until
+loop processing
+
+Loops are a programming structure that allow us to run a piece of code several times, and then stop when a certain condition is met.
+
+for i in $var ; do
+for i ; do
