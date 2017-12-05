@@ -1,0 +1,106 @@
+-rw-rw-r--
+need to enable execute on the file with chmod
+
+editing ownership for execution - chmod u+x /home/rboyd/bin/simple_script.sh
+
+u - user owner
++ - add permission
+x - execute permission
+
+-------------------------
+
+Creating a simple script review
+Creating a file with a .sh extension
+
+use #!/bin/bash/ - called a hasbang or shebang
+
+#comments come after the "#"
+
+echo "Hi there..." - print string of text to standard out.
+
+executing - the user needs to have a execute permissions on the file
+--------------------------
+
+Course Outline
+Executing Scripts
+Referencing Variables
+Manipulating Variables
+Positional Variables
+
+Executing Scripts
+~/bin/simple_script.sh
+~ = $HOME
+echo $HOME = echo ~
+./  = Current directory
+./simple_script.sh
+echo $PATH
+Don't give scripts the same name as system commands.
+bash ./simple_script.sh
+Forking creates new processes with independent environments.
+. ./simple_script.sh - sourcing the script.  Tell's the 
+If you define a variable and then insert into simple_script.sh, it will not be seen when you execute it normally unless you execute it on the forked environment using . ./simple_script.sh
+It's best practice to give execute permission and call an interpreter in our script.
+~ and ./ can often be used to save typing.
+"Sourcing" a script will run it in the current environment.
+-----------------------
+
+Variables
+echo -e tells echo to interpret special charactesr within the command
+values entered between single quotes '' are interpreted literally
+You can populate a variables with the output of a command - variable=$(command)
+Positional Parameters
+command <arg1> <arg2> <arg3> <argn>
+0	1      2      3	     4
+cp ~/bin/script1.sh ~/archive/script1.sh
+0  1		    2	
+$ - the standard way to address variables
+$1 $2 $3 are read only variables that automatically hold the values of arguments that we pass into our scripts.
+shift - shift without any arguments shifts each position paramters one space to the left
+$# = Total number of args
+#@  = All args as a list
+$* = All args as a single value
+What was covered
+executing scripts
+define interp
+assign eecute permissions
+source the script
+       call it with . or the source command
+positional parameters
+------------------------
+
+Getting User Input
+read - "Enter first number: " value1
+read - is the command to get input from the user
+-p switch displays the prompt for the user to see
+"Enter first number; " is the prompt that the user will see
+value1 creates a new variable that will store the users input
+$REPLY stores the user input read in from the let command
+You can execute read from the shell.
+If more values are specified than variables, the last variable will store all input after you have used all variables.
+What we covered
+the read command
+command options that allo us to modify the read commands function.  
+-s supprress user input from being displayed on the screen
+-n1 limit the number of characters the user could input
+$REPLY - this is where read will store user input if we don't give it somewhere else to store it.
+storing multiple values from the user.
+-----------------------
+
+Conditionals
+	Outline
+	Primer
+	if conditional
+	case conditional
+	build a script
+
+if free disk space < 10%
+then do this 
+else do this
+fi
+
+if[[$# -eq 0]]
+$# - keeps account of the positional parameters passed in from the command line 
+
+$* = "arg1 arg2 arg3 ...argn"
+$@ = "arg1" "arg2" "arg3"...
+
