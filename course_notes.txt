@@ -134,3 +134,18 @@ Loops are a programming structure that allow us to run a piece of code several t
 
 for i in $var ; do
 for i ; do
+
+-le less than or equal to
+-ge greater than or equal to
+
+continue
+break
+until
+--------------------
+
+Outline
+simple menus
+functions
+scheduling
+
+Creating menus with select

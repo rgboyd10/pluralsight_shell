@@ -7,8 +7,9 @@ if [ "$#" -eq 0 ] ; then
     exit 1
 fi
 
-for i in ; do
+for i ; do
     check=$(file $1 | cut -d " " -f2)
+    filename="$1"
 
     case $check in
 	"ASCII")
@@ -22,7 +23,7 @@ for i in ; do
        ;;
        *)
 	    echo -e "\nGuess I'm having a bad day, I don't know that file type."
-    ;;
-esac
-
+       ;;
+    esac
+shift
 done
