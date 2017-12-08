@@ -1,0 +1,2 @@
+#crontab file to schedule weekly-bins.sh script to tell me if tits recycling bins or normal bins
+7 16 * * 0 rboyd /home/rboyd/bin/weekly-bins.sh

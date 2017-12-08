@@ -8,7 +8,8 @@ if [ "$#" -eq 0 ] ; then
 fi
 
 for i ; do
-    check=$(file $1 | cut -d " " -f2)
+    check=$(file $1 | cut -d " " -f1)
+    echo $check
     filename="$1"
 
     case $check in

@@ -149,3 +149,52 @@ functions
 scheduling
 
 Creating menus with select
+
+Don't give functions the same names as alias, built-ins or the $PATH variable.
+
+function()
+{
+
+}
+
+Scheduling
+
+Recurring
+Cron
+	-can schedule jobs while the machine is on.
+	-main flaw is that it doesn't like the system being powered off.
+
+7 16 * * 0
+7 - minute
+16 - hour
+* - day of month
+* - month number
+0 - day of week
+
+
+  
+Anacron
+	-does check for jobs after downtime. Can only run a job once a day.
+
+One-off
+at
+bat
+
+crontab files
+.sh file
+-------------------------------------
+
+echo command
+exit codes
+xtrace
+
+echo
+ $? - last status is stored here
+
+xtrace - useful in debugging
+prints all script commands to the screen before it executes them.
+
+bash -x enables xtrace
+
+set -x (xtrace on)
+set +x (xtrace off)
